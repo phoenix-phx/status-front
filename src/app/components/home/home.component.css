@@ -33,3 +33,15 @@
 .card-img{
     width: 50%;
 }
+
+/*Profiles*/
+.items{
+    margin: 1%;
+    padding: 2%;
+}
+
+.pill{
+    background-color: #24245B !important;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
