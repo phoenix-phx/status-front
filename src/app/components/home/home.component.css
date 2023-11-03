@@ -1,3 +1,4 @@
+/* Hero */
 .hero{
     position: relative;
     display: inline-block;
@@ -14,4 +15,21 @@
     top: 50%;
     left: 15%;
     transform: translate(-15%, -50%);
+}
+
+
+/*Cards*/
+.cards{
+    padding: 2%;
+    background-color: #24245B;
+}   
+
+.card-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img{
+    width: 50%;
 }
