@@ -1,0 +1,17 @@
+.hero{
+    position: relative;
+    display: inline-block;
+}
+
+.hero-img{
+    position: relative;
+    width: 98.75vw;
+    height: 85vh;
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-15%, -50%);
+}
