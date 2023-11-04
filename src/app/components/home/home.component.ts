@@ -25,20 +25,9 @@ export class HomeComponent implements OnInit {
       console.log("response:");
       console.log(res.body);
       this.profiles = res.body as Profile[];
-      this.slides = this.chunk(this.profiles, 4);
-      console.log("slices: ");
-      console.log(this.slides);
+      this.defaultSlides();
       this.selectByCountries(this.profiles);
       });
-  }
-
-  // carousel slides processing
-  chunk(arr: any, chunkSize: any){
-    let R = [];
-    for(let i = 0, len = arr.length; i<len; i+=chunkSize){
-      R.push(arr.slice(i, i+chunkSize));
-    }
-    return R;
   }
 
   selectByCountries(arr: Profile[]){
@@ -50,5 +39,31 @@ export class HomeComponent implements OnInit {
         this.argentinaProfiles.push(p);
       }
     }
+  }
+
+  // carousel slides processing
+  chunk(arr: any, chunkSize: any){
+    let R = [];
+    for(let i = 0, len = arr.length; i<len; i+=chunkSize){
+      R.push(arr.slice(i, i+chunkSize));
+    }
+    return R;
+  }
+
+  // actions
+  defaultSlides(){
+    this.slides = this.chunk(this.profiles, 4);
+    console.log(this.slides);
+  }
+
+  onClickBolivia(){
+    this.slides = this.chunk(this.boliviaProfiles, 4);
+    console.log(this.slides);
+  }
+
+
+  onClickArgentina(){
+    this.slides = this.chunk(this.argentinaProfiles, 4);
+    console.log(this.slides);
   }
 }

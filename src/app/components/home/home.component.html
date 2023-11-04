@@ -52,18 +52,18 @@
     <div class="pills">
         <ul class="nav justify-content-center">
             <li class="nav-item items">
-              <a class="nav-link active rounded-pill badge pill" aria-current="page" href="#">Todos</a>
+              <a class="nav-link active rounded-pill badge pill" aria-current="page" (click)="defaultSlides()">Todos</a>
             </li>
             <li class="nav-item items">
-              <a class="nav-link rounded-pill badge pill" href="#">Bolivia</a>
+              <a class="nav-link rounded-pill badge pill" (click)="onClickBolivia()">Bolivia</a>
             </li>
             <li class="nav-item items">
-              <a class="nav-link rounded-pill badge pill" href="#">Argentina</a>
+              <a class="nav-link rounded-pill badge pill" (click)="onClickArgentina()">Argentina</a>
             </li>
         </ul>
     </div>
 
-    <section class="pt-5 pb-5">
+    <div class="pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-6 text-right">
@@ -83,8 +83,10 @@
                                     <div class="carousel-item active" >
                                         <div class="row">
                                             <div class="col-md-3 mb-3" *ngFor="let profile of item">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="{{ profile.imageUrl }}">
+                                                <div class="card carousel-card">
+                                                    <div class="img-cont">
+                                                        <img class="img-fluid card-img" alt="100%x280" src="{{ profile.imageUrl }}">
+                                                    </div>
                                                     <div class="card-body">
                                                         <h4 class="card-title">{{ profile.name }}</h4>
                                                         <p class="card-text">{{ profile.country }}</p>
@@ -99,8 +101,10 @@
                                 <div class="carousel-item" >
                                     <div class="row">
                                         <div class="col-md-3 mb-3" *ngFor="let profile of item">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="{{ profile.imageUrl }}">
+                                            <div class="card carousel-card">
+                                                <div class="img-cont">
+                                                    <img class="img-fluid card-img" alt="100%x280" src="{{ profile.imageUrl }}">
+                                                </div>
                                                 <div class="card-body">
                                                     <h4 class="card-title">{{ profile.name }}</h4>
                                                     <p class="card-text">{{ profile.country }}</p>
@@ -118,5 +122,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="mprof-btn">
+        <button class="btn btn-outline-dark">Ver más perfiles</button>
+    </div>
 </section>
